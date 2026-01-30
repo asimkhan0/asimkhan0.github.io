@@ -1,73 +1,52 @@
 import { useState } from 'react';
 import './Portfolio.css';
-import lilac from '../../assets/lilac.png';
-import musicmuse from '../../assets/musicmuse.png';
-import posImage from '../../assets/pos.png';
-import galaxyImage from '../../assets/galaxy.png';
-import ragImage from '../../assets/rag.jpg';
-import talk from '../../assets/talk.png';
-import attireAvenue from '../../assets/attireAvenue.png';
+import nomyshImage from '../../assets/nomysh_dashboard.png';
+import forgingBlockImage from '../../assets/forgingblock_wallet.png';
+import replicarImage from '../../assets/replicar_simulation.png';
+import itboostImage from '../../assets/itboost_dashboard.png';
+import qubitxImage from '../../assets/qubitx_chat.png';
 
 const categories = {
 	WEB: 'WEB',
 	DESKTOP: 'DESKTOP',
-	FIGMA: 'FIGMA',
-	WORDPRESS: 'WORDPRESS',
-	RESEARCH: 'RESEARCH',
+	MOBILE: 'MOBILE',
 };
 
 const menuItem = [
 	{
-		id: 7,
-		image: ragImage,
-		title: 'Knowledge graph + RAG System (Research AI Project)',
-		category: categories.RESEARCH,
-		link: 'https://github.com/orgs/NDK-Research-AI-Project/repositories',
-	},
-	{
 		id: 1,
-		image: posImage,
-		title: 'POS WARE - Point of Sale',
-		category: categories.DESKTOP,
-		link: 'https://github.com/foverokavindz/TeamElitePOS',
+		image: nomyshImage,
+		title: 'Nomysh - Video Commerce Platform',
+		category: categories.WEB,
+		link: 'https://nomysh.com',
 	},
 	{
 		id: 2,
-		image: lilac,
-		title: 'Lilac E-Commerce Store',
+		image: qubitxImage,
+		title: 'QubitX - AI RAG System',
 		category: categories.WEB,
-		link: 'https://linktr.ee/foveromw',
+		link: 'https://ask-qubitx.vercel.app/',
 	},
 	{
 		id: 3,
-		image: musicmuse,
-		title: 'Music Muse - Emotion base music player',
+		image: forgingBlockImage,
+		title: 'ForgingBlock - Crypto Wallet',
 		category: categories.WEB,
-		link: 'https://github.com/Mu-me/Music-Muse',
+		link: 'https://forgingblock.io',
 	},
-	,
 	{
 		id: 4,
-		image: attireAvenue,
-		title: 'Attire Avenue',
-		category: categories.WEB,
-		link: 'https://github.com/Attire-Avenue-Online-Store',
+		image: replicarImage,
+		title: 'ReplicaR - Autonomous Driving Sim',
+		category: categories.DESKTOP, // Assuming simulation runs on desktop/web
+		link: 'https://github.com/asimkhan034', // Placeholder or GitHub
 	},
-	,
 	{
 		id: 5,
-		image: talk,
-		title: '.Talk - Chat App',
+		image: itboostImage,
+		title: 'ITBoost - IT Documentation',
 		category: categories.WEB,
-		link: 'https://github.com/foverokavindz/chat-app-1',
-	},
-	,
-	{
-		id: 6,
-		image: galaxyImage,
-		title: 'Virtual Galaxy Explorer',
-		category: categories.FIGMA,
-		link: 'https://www.figma.com/file/LdoZU1FAYTeyVKvDXhHboo/Virtual-Galaxy-Explorer-(Community)?type=design&node-id=0-1&mode=design&t=u9FRpvMw0LcYOf4K-0',
+		link: 'https://itboost.com',
 	},
 ];
 
@@ -95,14 +74,8 @@ const Portfolio = () => {
 				<span className="work__item" onClick={() => filterItems(categories.DESKTOP)}>
 					Desktop Apps
 				</span>
-				<span className="work__item" onClick={() => filterItems(categories.FIGMA)}>
-					Figma Design
-				</span>
-				<span className="work__item" onClick={() => filterItems(categories.WORDPRESS)}>
-					Wordpress
-				</span>
-				<span className="work__item" onClick={() => filterItems(categories.RESEARCH)}>
-					Research
+				<span className="work__item" onClick={() => filterItems(categories.MOBILE)}>
+					Mobile Apps
 				</span>
 			</div>
 
@@ -118,7 +91,7 @@ const Portfolio = () => {
 							</div>
 							<span className="work__category">{category}</span>
 							<h3 className="work__title">{title}</h3>
-							<a href={item.link} className="work__button" target="_blank">
+							<a href={item.link} className="work__button" target="_blank" rel="noreferrer">
 								<i className="icon-link work__button-icon"></i>
 							</a>
 						</div>
