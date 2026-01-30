@@ -4,27 +4,28 @@ const socialLinks = [
   {
     id: 1,
     icon: 'fa-brands fa-linkedin',
-    link: 'https://www.linkedin.com/in/kavinda-maduranga-1302a71b7',
+    link: 'https://www.linkedin.com/in/asimkhan034/',
   },
+  // {
+  //   id: 2,
+  //   icon: 'fa-brands fa-x-twitter',
+  //   link: 'https://twitter.com/kavindzMW',
+  // },
+  // {
+  //   id: 3,
+  //   icon: 'fa-brands fa-behance',
+  //   link: 'https://www.behance.net/kavindamadhura',
+  // },
+
   {
     id: 2,
-    icon: 'fa-brands fa-x-twitter',
-    link: 'https://twitter.com/kavindzMW',
+    icon: 'fa-brands fa-github',
+    link: 'https://github.com/asimkhan0',
   },
   {
     id: 3,
-    icon: 'fa-brands fa-behance',
-    link: 'https://www.behance.net/kavindamadhura',
-  },
-  {
-    id: 4,
     icon: 'fa-brands fa-facebook',
-    link: 'https://www.facebook.com/kavindzfovero/',
-  },
-  {
-    id: 5,
-    icon: 'fa-brands fa-github',
-    link: 'https://github.com/foverokavindz',
+    link: 'https://www.facebook.com/asim.khan.034/',
   },
 ];
 

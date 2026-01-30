@@ -14,10 +14,10 @@ const Home = () => {
 					<img src={Me} alt="" className="home__img" />
 					<div className="home__img-decoration"></div>
 				</div>
-				<h1 className="home__name">Kavinda Weerasinghe</h1>
-				<span className="home__education">Full-Stack Engineer & Designer</span>
+				<h1 className="home__name">Muhammad Asim Khan</h1>
+				<span className="home__education">Senior Software Engineer</span>
 				<div className="memphis-bg-texttype">
-					<TextType text={['Crafting Code & Shaping Solution', 'Code Artist + Problem Solver', 'Simplifying Complexity + Enhancing Experience']} typingSpeed={75} pauseDuration={2000} showCursor={true} cursorCharacter="●" />
+					<TextType text={['Full Stack Developer | 9+ Years Experience', 'Building Scalable Web Applications', 'AI & Cloud Solutions Expert']} typingSpeed={75} pauseDuration={2000} showCursor={true} cursorCharacter="●" />
 				</div>
 				<HeaderSocials />
 				<a href="#contact" className="btn">

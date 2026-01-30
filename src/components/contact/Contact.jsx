@@ -48,12 +48,12 @@ const Contact = () => {
 		setIsSending(true);
 
 		try {
-			const clientInfo = await collectClientInfo();
-
-			const hiddenInput = form.current.querySelector('input[name="xcvbnm"]');
-			hiddenInput.value = JSON.stringify(clientInfo);
-
-			await emailjs.sendForm('service_iipp5p8', 'template_mw9cj3c', form.current, 'V_-J9LWhLL0RJXpEY');
+			await emailjs.sendForm(
+				import.meta.env.VITE_EMAILJS_SERVICE_ID,
+				import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+				form.current,
+				import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+			);
 
 			notify(NotificationType.SUCCESS);
 			form.current.reset();
@@ -72,32 +72,30 @@ const Contact = () => {
 			<div className="contact__container grid">
 				<div className="contact__info">
 					<h3 className="contact__title">Let's Talk about everything</h3>
-					<p className="contact__details">Don't like forms? Send me an email.</p>
+					<p className="contact__details">Don't like forms? Send me an email at khanasim034@gmail.com</p>
 				</div>
 
 				<form ref={form} onSubmit={sendEmail} className="contact__form">
 					<div className="contact__form-group">
 						<div className="contact__form-div">
-							<input type="text" name="user_name" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Insert your name" disabled={isSending} required />
+							<input type="text" name="user_name" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Your Name" disabled={isSending} required />
 						</div>
 
 						<div className="contact__form-div">
-							<input type="email" name="user_email" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Insert your email" disabled={isSending} required />
+							<input type="email" name="user_email" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Your Email" disabled={isSending} required />
 						</div>
 					</div>
 
 					<div className="contact__form-div">
-						<input type="text" name="user_subject" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Insert your subject" disabled={isSending} required />
+						<input type="text" name="subject" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Subject" disabled={isSending} required />
 					</div>
 
 					<div className="contact__form-div contact__form-area">
-						<textarea name="user_message" rows="10" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Write your message" disabled={isSending} required />
+						<textarea name="message" rows="6" className={`contact__form-input ${isSending ? 'disable_contact__form-input' : ''}`} placeholder="Write your message" disabled={isSending} required />
 					</div>
 
-					<input type="hidden" name="xcvbnm" />
-
 					<button type="submit" className={`btn ${isSending ? 'disabled-btn' : ''}`} disabled={isSending} onClick={() => handleClick()}>
-						{isSending ? 'Sending...' : 'Send message'}
+						{isSending ? 'Sending...' : 'Send Message'}
 					</button>
 				</form>
 			</div>
