@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Sidebar.css';
-import Logo from '../../assets/logo.png';
-import LogoWhite from '../../assets/logoWhite.png';
+import Logo from '../../assets/logo-ak.png';
+import LogoWhite from '../../assets/logo-ak-white.png';
 import { useTheme } from '../../context/theme';
 
 const navLinks = [
@@ -10,8 +10,7 @@ const navLinks = [
 	{ id: 3, link: '#services', icon: 'icon-briefcase' },
 	{ id: 4, link: '#resume', icon: 'icon-graduation' },
 	{ id: 5, link: '#portfolio', icon: 'icon-layers' },
-	{ id: 6, link: '#blog', icon: 'icon-note' },
-	{ id: 7, link: '#contact', icon: 'icon-bubble' },
+	{ id: 6, link: '#contact', icon: 'icon-bubble' },
 ];
 
 const Sidebar = () => {
@@ -39,7 +38,7 @@ const Sidebar = () => {
 				</nav>
 
 				<div className="nav__footer">
-					<span className="copyright">&copy; 2025 - 2026 | v2.0</span>
+					<span className="copyright">&copy; 2026</span>
 				</div>
 			</aside>
 
