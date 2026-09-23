@@ -20,7 +20,7 @@ const expData = [
 		category: 'experience',
 		icon: 'icon-briefcase',
 		year: 'June 2022 - Present',
-		title: 'Senior Full-stack Engineer @ Nomysh USA',
+		title: 'Lead Full-stack Engineer @ Nomysh USA',
 		desc: 'Pioneered the Nomysh web application using NextJS and ReactJS, resulting in a 30% increase in user engagement. Initiated SEO optimization through server-side rendering and automated OG metatags, boosting organic traffic by 25%. Designed and developed the landing page, user dashboard, and admin dashboard, improving navigation efficiency by 40%. Created a video uploader feature, enabling users to select any frame for the thumbnail, enhancing user-generated content quality by 50%. Architected the frontend for the chat feature, resulting in a 15% increase in user interaction.',
 	},
 	{
