@@ -12,6 +12,52 @@ const categories = {
 	MOBILE: 'MOBILE',
 };
 
+const customProjects = [
+	{
+		title: 'Yalla',
+		category: 'Wholesale · Saudi Arabia',
+		status: 'Developed · Not yet launched',
+		description: 'Developed a wholesale platform for the Saudi market, designed to bring business buyers and suppliers together through a digital wholesale experience. The product is built and awaiting launch; explore the design preview on Figma.',
+		link: 'https://www.figma.com/design/lPBoLMuiZzG3jVUCsyc4jj/yalla-app--Copy-?node-id=605-10499&t=ow9Vq6AJUh2uXRsY-0',
+		linkLabel: 'View Figma design',
+	},
+	{
+		title: 'Jingle Pay',
+		category: 'Fintech · UAE',
+		description: 'Contributed to the core frontend codebase of Jingle Pay, a digital finance platform offering international money transfers, a digital wallet, and everyday payments. The product brings remittance comparisons and money management into one experience.',
+		link: 'https://jinglepay.com/are/en/',
+		linkLabel: 'Visit Jingle Pay',
+	},
+	{
+		title: 'Hala Cashier',
+		category: 'Point of sale · Saudi Arabia',
+		description: 'A cashier and business management system serving merchants across Saudi Arabia. Hala Cashier brings day-to-day operations together, with tools for orders, inventory, integrated payments, and sales reporting.',
+		link: 'https://hala.com/en/products/restaurant-pos',
+		linkLabel: 'Explore Hala Cashier',
+	},
+	{
+		title: 'Rihal',
+		category: 'Data visualization · Oman',
+		description: 'Built dashboards and 3D charts for Rihal, an Omani technology company specializing in data, AI, and automation. My work focused on presenting complex information visually so users could explore data and understand it more easily.',
+		link: 'https://www.rihal.om/',
+		linkLabel: 'Visit Rihal',
+	},
+	{
+		title: 'AI Restaurant Reservations',
+		category: 'Conversational AI · WhatsApp',
+		description: 'Built an AI-powered restaurant reservation experience through WhatsApp. The project brings table booking into a familiar chat interface, using conversational AI to help guests make reservation requests.',
+		link: '#contact',
+		linkLabel: 'Discuss this project',
+	},
+	{
+		title: 'remind.me',
+		category: 'Energy services · Germany',
+		description: 'Supporting frontend development and automations for remind.me, a German service that helps customers compare electricity and gas tariffs and switch providers. Its ongoing switching service helps customers keep their energy contracts up to date.',
+		link: 'https://www.remind.me/',
+		linkLabel: 'Visit remind.me',
+	},
+];
+
 const menuItem = [
 	{
 		id: 1,
@@ -63,7 +109,20 @@ const Portfolio = () => {
 
 	return (
 		<section className="work container section" id="portfolio">
-			<h2 className="section__title">Recent works</h2>
+			<h2 className="section__title">Selected projects</h2>
+			<p className="projects__intro">Custom products and client collaborations across commerce, fintech, data visualization, and automation.</p>
+			<div className="projects__grid grid">
+				{customProjects.map((project) => (
+					<article className="project__card" key={project.title}>
+						<p className="project__category">{project.category}</p>
+						<h3>{project.title}</h3>
+						{project.status && <p className="project__status">{project.status}</p>}
+						<p className="project__description">{project.description}</p>
+						<a className="project__link" href={project.link}>{project.linkLabel} <span aria-hidden="true">↗</span></a>
+					</article>
+				))}
+			</div>
+			<h3 className="projects__more">More work</h3>
 			<div className="work__filters">
 				<span className="work__item" onClick={() => setItems(menuItem)}>
 					Everything
